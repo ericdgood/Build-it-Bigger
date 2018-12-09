@@ -34,7 +34,7 @@ public class MainActivityFragment extends Fragment {
             public void onClick(View view) {
                 String joke = JokeLibrary.joke();
 //                Toast.makeText(getActivity(), joke, Toast.LENGTH_SHORT).show();
-                Intent androidLibrary = new Intent(getActivity(), AdnroidMainActivity.class);
+                Intent androidLibrary = new Intent(getActivity(), AdnroidMainActivity.class).putExtra("joke", joke);
                 startActivity(androidLibrary);
 
             }
