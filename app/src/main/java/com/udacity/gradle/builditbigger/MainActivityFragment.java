@@ -15,8 +15,6 @@ import com.google.android.gms.ads.AdView;
  */
 public class MainActivityFragment extends Fragment {
 
-    private String mJoke;
-
     public MainActivityFragment() {
     }
 
@@ -31,8 +29,14 @@ public class MainActivityFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NetworkAPI networkApi = new NetworkAPI();
-                networkApi.execute(getContext());
+//                STEP 1
+//                Toast.makeText(getActivity(), joke, Toast.LENGTH_SHORT).show();
+//                STEP 2
+//                String joke = JokeLibrary.joke();
+//                Intent androidLibrary = new Intent(getActivity(), AdnroidMainActivity.class).putExtra("joke", joke);
+//                startActivity(androidLibrary);
+//                STEP 3
+                new EndpointAsyncTask().execute(getContext());
             }
         });
 

@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 //    public void tellJoke(View view) {
 //
-//        NetworkAPI networkApi = new NetworkAPI();
+//        EndpointAsyncTask networkApi = new EndpointAsyncTask();
 //        networkApi.execute(this);
 //
 //    }
