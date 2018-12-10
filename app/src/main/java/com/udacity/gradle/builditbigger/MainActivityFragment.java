@@ -1,6 +1,5 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,13 +9,13 @@ import android.widget.Button;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.pia.androidlibrary.AdnroidMainActivity;
-import com.pia.jokelibrary.JokeLibrary;
 
 /**
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment {
+
+    private String mJoke;
 
     public MainActivityFragment() {
     }
@@ -32,11 +31,8 @@ public class MainActivityFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String joke = JokeLibrary.joke();
-//                Toast.makeText(getActivity(), joke, Toast.LENGTH_SHORT).show();
-                Intent androidLibrary = new Intent(getActivity(), AdnroidMainActivity.class).putExtra("joke", joke);
-                startActivity(androidLibrary);
-
+                NetworkAPI networkApi = new NetworkAPI();
+                networkApi.execute(getContext());
             }
         });
 
