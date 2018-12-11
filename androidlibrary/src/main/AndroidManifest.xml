@@ -3,7 +3,7 @@
     package="com.pia.androidlibrary">
 
     <application>
-        <activity android:name=".AdnroidMainActivity"></activity>
+        <activity android:name=".AdnroidMainActivity" />
     </application>
 
 </manifest>

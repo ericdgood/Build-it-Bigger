@@ -11,8 +11,7 @@ import com.pia.jokelibrary.JokeLibrary;
         version = "v1",
         namespace = @ApiNamespace(
                 ownerDomain = "backend.builditbigger.gradle.udacity.com",
-                ownerName = "backend.builditbigger.gradle.udacity.com",
-                packagePath = ""
+                ownerName = "backend.builditbigger.gradle.udacity.com"
         )
 )
 public class MyEndpoint {
