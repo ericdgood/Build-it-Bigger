@@ -29,15 +29,14 @@ public class EndpointsAsyncTaskTestUnit extends AndroidTestCase {
             new ActivityTestRule(MainActivity.class);
 
 
+    @Test
+    public void testJokeIsNotEmpty() throws Exception {
 
-   @Test
-   public void testJokeIsNotEmpty() throws Exception {
-
-       EndpointAsyncTask aTest =  new EndpointAsyncTask();
-       aTest.execute(InstrumentationRegistry.getContext());
-       String joke = aTest.get(5, TimeUnit.SECONDS);
-       Assert.assertTrue(!joke.equals(""));
-   }
+        EndpointAsyncTask aTest = new EndpointAsyncTask();
+        aTest.execute(InstrumentationRegistry.getContext());
+        String joke = aTest.get(5, TimeUnit.SECONDS);
+        Assert.assertTrue(!joke.equals(""));
+    }
 
     @Test
     public void testVerifyResponse() {
