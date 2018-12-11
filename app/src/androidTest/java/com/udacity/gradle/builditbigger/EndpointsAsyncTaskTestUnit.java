@@ -33,7 +33,7 @@ public class EndpointsAsyncTaskTestUnit extends AndroidTestCase {
    @Test
    public void testJokeIsNotEmpty() throws Exception {
 
-       EndpointsAsyncTaskTest aTest =  new EndpointsAsyncTaskTest();
+       EndpointAsyncTask aTest =  new EndpointAsyncTask();
        aTest.execute(InstrumentationRegistry.getContext());
        String joke = aTest.get(5, TimeUnit.SECONDS);
        Assert.assertTrue(!joke.equals(""));
