@@ -36,6 +36,7 @@ public class EndpointsAsyncTaskTestUnit extends AndroidTestCase {
         aTest.execute(InstrumentationRegistry.getContext());
         String joke = aTest.get(5, TimeUnit.SECONDS);
         Assert.assertTrue(!joke.equals(""));
+        Assert.assertNotNull(joke);
     }
 
     @Test

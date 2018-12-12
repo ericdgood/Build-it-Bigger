@@ -16,15 +16,6 @@ import com.pia.jokelibrary.JokeLibrary;
 )
 public class MyEndpoint {
 
-//    /** A simple endpoint method that takes a name and says Hi back */
-//    @ApiMethod(name = "sayHi")
-//    public MyBean sayHi(@Named("name") String name) {
-//        MyBean response = new MyBean();
-//        response.setData("test, " + name);
-//
-//        return response;
-//    }
-
     @ApiMethod(name = "getJoke")
     public MyBean getJoke() {
         MyBean response = new MyBean();
